@@ -1,2 +1,28 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<header class="page-header">
+   <h1>Admin &raquo; Dashboard</h1>
+</header>
+<div class="well">
+    <span> Categories </span>
+    <span class="badge"><%= Category.count %> </span>
+
+    <hr/>
+    <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Go to Category
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li><%= link_to 'Apparel', category_path("1") %></li>
+        <li><%= link_to 'Electronics', category_path("2") %></li>
+        <li><%= link_to 'Furniture', category_path("3") %></li>
+    </ul>
+    </div>
+</div>
+   
+
+<div class="well">
+<span> Products </span>
+<span class="badge"><%= Product.count %> </span>
+
+
+  <%= link_to 'Products', "/admin/products" %>
+
+</div>
