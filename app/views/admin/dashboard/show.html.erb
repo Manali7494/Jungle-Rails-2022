@@ -22,7 +22,8 @@
 <span> Products </span>
 <span class="badge"><%= Product.count %> </span>
 
+<%= link_to 'All Products', [:admin, :products], class: 'btn btn-info' %>
 
-  <%= link_to 'Products', "/admin/products" %>
+  <%= link_to 'Products', "/admin/products" , class: 'btn btn-info'%>
 
 </div>
